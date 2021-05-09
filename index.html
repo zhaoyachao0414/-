@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 200;
+				height: auto;
+				display: block; 
+				margin: 0 auto;
+				transition:all 2s; /*所有图片过渡效果*/
+			}
+			img:hover{
+				-webkit-filter: none;
+			}
+			.img1{
+				/*滤镜属性，设置饱和度saturate()*/
+				-webkit-filter: saturate(2);
+			}
+			.img2{
+				/*滤镜属性，设置模糊度blur 单位是像素*/
+				-webkit-filter: blur(4px);
+			}
+			.img3{
+				/*滤镜属性，设置灰度grayscale 1灰0正常色*/
+				-webkit-filter: grayscale(1);
+			}
+			.img4{
+				/*滤镜属性，设置亮度brightness 默认值是1正常亮度 2曝光 0黑色*/
+				-webkit-filter: brightness(0.2);
+			}
+			.img5{
+				/*滤镜属性，设置褐色sepia 1 %100褐色 正常0*/
+				-webkit-filter: sepia(1);
+			}
+			.img6{
+				/*滤镜属性，设置胶片底色（反向）效果*/
+				-webkit-filter: invert(1);
+			}
+			
+			/*互相作用起来，形成素描效果*/
+			.img7{         /*一开始效果*/
+				-webkit-filter: brightness(12) blur(5px) grayscale(1);
+				transition: all 10s; <!--过渡效果-->
+			}
+			.img7:hover{   /*后来的效果*/
+				-webkit-filter: brightness(1) blur(0px) grayscale(1);
+			}
+			/*contrast 对比度*/
+		</style>
+	</head>
+	<body>
+		<img class="img1" src="img/zhangruonan.jpg" >
+		<img class="img2" src="img/zhangruonan.jpg" >
+		<img class="img3" src="img/zhangruonan.jpg" >
+		<img class="img4" src="img/zhangruonan.jpg" >
+		<img class="img5" src="img/zhangruonan.jpg" >
+		<img class="img6" src="img/zhangruonan.jpg" >
+		
+		<img class="img7" src="img/zhangruonan.jpg" >
+	</body>
+</html>
